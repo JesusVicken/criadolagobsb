@@ -21,7 +21,7 @@ export default function Hero() {
         >
           <source src="/hero.mp4" type="video/mp4" />
           <source src="/media/videos/hero.mp4" type="video/mp4" />
-          <source src="/media/videos/videoCapaHero.mp4" type="video/mp4" />
+          <source src="/media/videos/cria.mp4" type="video/mp4" />
           <source src="/media/videos/cria.mp4" type="video/mp4" />
           <source src="/cria.mp4" type="video/mp4" />
         </video>
