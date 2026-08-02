@@ -189,15 +189,36 @@ const categoriesFilter = [
 /* ─── Carousel Card Component ─── */
 function ProductCardCarousel({ group }: { group: ProductGroup }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
 
-  const handleNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleNext = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     setCurrentIndex((prev) => (prev + 1) % group.images.length);
   };
 
-  const handlePrev = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handlePrev = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     setCurrentIndex((prev) => (prev - 1 + group.images.length) % group.images.length);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    const touchEnd = e.changedTouches[0].clientX;
+    const distance = touchStart - touchEnd;
+
+    // Minimum swipe threshold (40px)
+    if (distance > 40) {
+      // Swipe left -> next image
+      handleNext();
+    } else if (distance < -40) {
+      // Swipe right -> previous image
+      handlePrev();
+    }
+    setTouchStart(null);
   };
 
   const currentImg = group.images[currentIndex];
@@ -205,7 +226,11 @@ function ProductCardCarousel({ group }: { group: ProductGroup }) {
   return (
     <article className="glass hover-lift group flex flex-col justify-between overflow-hidden border border-[var(--border)] bg-[#0e1420]/80 rounded-sm">
       {/* Image Slider Wrapper */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-[#080c10]">
+      <div
+        className="relative aspect-[4/5] overflow-hidden bg-[#080c10] select-none touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         <Image
           src={currentImg}
           alt={`${group.name} - Opção ${currentIndex + 1}`}
