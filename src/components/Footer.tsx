@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-white text-[10px] font-semibold tracking-[0.35em] uppercase">Comprar</h3>
+            <h3 className="text-white text-[10px] font-semibold tracking-[0.35em] uppercase">Nova Coleção</h3>
             <p className="text-[var(--muted)] text-sm leading-relaxed max-w-xs">
               Não vendemos pelo site. Chama diretamente no Instagram ou no WhatsApp para garantir a sua peça.
             </p>

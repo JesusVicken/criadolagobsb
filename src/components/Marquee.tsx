@@ -1,6 +1,6 @@
 const marqueeItems = [
-  "REMO", "SUP", "CAIAQUE", "BRASÍLIA", "LAGO PARANOÁ",
-  "DE ATLETA, PARA ATLETA", "REMO", "SUP", "CAIAQUE",
+  "LAGO PARANOÁ", "CRIA", "BRASÍLIA", "DE ATLETA, PARA ATLETA",
+  "REMO", "CANOA HAVAIANA", "MODA",
 ];
 
 export default function Marquee() {

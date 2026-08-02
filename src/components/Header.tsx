@@ -92,7 +92,7 @@ export default function Header() {
               <span>Instagram</span>
             </a>
             <a href={WHATS} target="_blank" rel="noopener noreferrer" className="btn-primary py-2 px-5">
-              <span className="text-xs">Comprar</span>
+              <span className="text-xs">Nova Coleção</span>
             </a>
           </div>
 
@@ -133,7 +133,7 @@ export default function Header() {
             <span>Instagram</span>
           </a>
           <a href={WHATS} target="_blank" rel="noopener noreferrer" className="btn-primary" onClick={() => setMenuOpen(false)}>
-            <span>Comprar via WhatsApp</span>
+            <span>Comprar Nova Coleção</span>
           </a>
         </div>
       </div>

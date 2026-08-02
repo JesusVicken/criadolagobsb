@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="manifesto"
-      className="relative py-24 md:py-36 overflow-hidden bg-lake-gradient"
+      className="relative py-20 sm:py-24 md:py-36 overflow-hidden bg-lake-gradient"
     >
       {/* Grid pattern */}
       <div
@@ -17,10 +17,10 @@ export default function About() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Left: Video + Image stack */}
         <div className="relative">
-          <div className="relative aspect-[3/4] max-w-sm mx-auto md:max-w-none overflow-hidden">
+          <div className="relative aspect-[3/4] max-w-xs sm:max-w-sm mx-auto md:max-w-none overflow-hidden">
             {/* Decorative frames */}
             <div className="absolute -top-3 -left-3 w-full h-full border border-[var(--lake-blue)] opacity-30 pointer-events-none z-10" />
             <div className="absolute -bottom-3 -right-3 w-full h-full border border-[var(--lake-glow)] opacity-15 pointer-events-none z-10" />
@@ -50,7 +50,7 @@ export default function About() {
         </div>
 
         {/* Right: Text */}
-        <div className="flex flex-col gap-5 sm:gap-6">
+        <div className="flex flex-col gap-5 sm:gap-6 mt-8 md:mt-0">
           <div className="flex items-center gap-3">
             <span className="block w-6 h-px bg-[var(--lake-glow)]" />
             <span className="text-[var(--lake-glow)] text-[11px] font-semibold tracking-[0.3em] uppercase">
@@ -98,18 +98,32 @@ export default function About() {
             <span>Conheça nossa história no Instagram</span>
           </a>
 
-          {/* Sports */}
-          <div className="grid grid-cols-3 gap-4 mt-3 pt-5 border-t border-[var(--border)]">
-            {[
-              { icon: "🚣", label: "Remo" },
-              { icon: "🏄", label: "SUP" },
-              { icon: "🛶", label: "Caiaque" },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col items-start gap-1">
-                <span className="text-2xl">{item.icon}</span>
-                <span className="text-xs text-[var(--muted)] tracking-widest uppercase">{item.label}</span>
+          {/* Modern image strip replacing emoji icons */}
+          <div className="relative mt-3 pt-5 border-t border-[var(--border)] overflow-hidden">
+            <div className="relative h-20 sm:h-24 rounded-sm overflow-hidden">
+              <Image
+                src="/media/editadas/hero-bg.png"
+                alt="Atleta Cria do Lago no Lago Paranoá"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              {/* Overlay with brand marks */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#080c10]/70 via-[#080c10]/30 to-[#080c10]/70" />
+              <div className="absolute inset-0 flex items-center justify-between px-4 sm:px-6">
+                <span className="text-white/90 text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase">
+                  Remo
+                </span>
+                <span className="w-px h-6 bg-white/20" />
+                <span className="text-white/90 text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase">
+                  Canoa Havaiana
+                </span>
+                <span className="w-px h-6 bg-white/20" />
+                <span className="text-white/90 text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase">
+                  SUP
+                </span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
