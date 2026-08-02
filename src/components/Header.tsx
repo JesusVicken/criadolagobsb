@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const navItems = [
   { label: "Coleção", href: "#colecao" },
-  { label: "Manifesto", href: "#manifesto" },
+  { label: "Use Cria", href: "#usecria" },
   { label: "Galeria", href: "#galeria" },
 ];
 
@@ -17,7 +17,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -31,16 +31,16 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "glass border-b border-[var(--border)] py-3" : "bg-transparent py-5"
+          scrolled ? "glass border-b border-[var(--border)] py-2.5 sm:py-3" : "bg-transparent py-4 sm:py-5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
           {/* Logo Image */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[var(--lake-blue)] group-hover:border-[var(--lake-glow)] transition-colors duration-300">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[var(--lake-blue)] group-hover:border-[var(--lake-glow)] transition-colors duration-300 shadow-[0_0_15px_rgba(30,111,168,0.3)]">
               <Image
                 src="/criadolago.jpg"
-                alt="Cria do Lago"
+                alt="Cria do Lago Logo"
                 fill
                 className="object-cover"
                 sizes="40px"
@@ -48,13 +48,13 @@ export default function Header() {
             </div>
             <div className="flex flex-col leading-none">
               <span
-                className="font-display text-xl text-white tracking-widest group-hover:text-[var(--lake-glow)] transition-colors duration-300"
+                className="font-display text-lg sm:text-xl text-white tracking-widest group-hover:text-[var(--lake-glow)] transition-colors duration-300"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
                 CRIA
               </span>
               <span
-                className="font-display text-[10px] tracking-[0.3em] text-[var(--lake-light)] -mt-[3px]"
+                className="font-display text-[9px] sm:text-[10px] tracking-[0.3em] text-[var(--lake-light)] -mt-[3px]"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
                 DO LAGO
@@ -68,7 +68,7 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-xs font-medium tracking-[0.2em] text-[var(--muted)] uppercase hover:text-white transition-colors duration-200 relative group"
+                className="text-xs font-medium tracking-[0.2em] text-[var(--muted)] uppercase hover:text-white transition-colors duration-200 relative group py-1"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-[var(--lake-glow)] transition-all duration-300 group-hover:w-full" />
@@ -96,10 +96,10 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Hamburger */}
+          {/* Hamburger Mobile */}
           <button
             id="menu-toggle"
-            className="md:hidden flex flex-col gap-[5px] p-2"
+            className="md:hidden flex flex-col gap-[5px] p-2 rounded-md hover:bg-white/5 active:scale-95 transition-all"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Abrir menu"
           >
@@ -110,29 +110,44 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Fullscreen Drawer */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 transition-all duration-500 ${
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 transition-all duration-500 px-6 ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
-        style={{ background: "rgba(8, 12, 16, 0.98)", backdropFilter: "blur(16px)" }}
+        style={{ background: "rgba(8, 12, 16, 0.98)", backdropFilter: "blur(20px)" }}
       >
-        {navItems.map((item, i) => (
-          <Link
-            key={item.label}
-            href={item.href}
+        <div className="flex flex-col items-center gap-6">
+          {navItems.map((item, i) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className="font-display text-5xl sm:text-6xl text-white hover:text-[var(--lake-glow)] transition-colors duration-200 tracking-wider"
+              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3.5 w-full max-w-xs mt-4">
+          <a
+            href={INSTA}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary justify-center text-xs py-3 w-full"
             onClick={() => setMenuOpen(false)}
-            className="font-display text-6xl text-white hover:text-[var(--lake-glow)] transition-colors duration-200"
-            style={{ fontFamily: "'Bebas Neue', sans-serif", animationDelay: `${i * 80}ms` }}
           >
-            {item.label}
-          </Link>
-        ))}
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <a href={INSTA} target="_blank" rel="noopener noreferrer" className="btn-secondary" onClick={() => setMenuOpen(false)}>
-            <span>Instagram</span>
+            <span>Instagram @criadolagobsb</span>
           </a>
-          <a href={WHATS} target="_blank" rel="noopener noreferrer" className="btn-primary" onClick={() => setMenuOpen(false)}>
+          <a
+            href={WHATS}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary justify-center text-xs py-3 w-full"
+            onClick={() => setMenuOpen(false)}
+          >
             <span>Comprar Nova Coleção</span>
           </a>
         </div>

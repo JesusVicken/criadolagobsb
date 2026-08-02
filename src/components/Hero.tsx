@@ -19,7 +19,10 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full object-cover"
           poster="/media/fotos/capa1.jpg"
         >
+          <source src="/hero.mp4" type="video/mp4" />
+          <source src="/media/videos/hero.mp4" type="video/mp4" />
           <source src="/media/videos/videoCapaHero.mp4" type="video/mp4" />
+          <source src="/media/videos/cria.mp4" type="video/mp4" />
           <source src="/cria.mp4" type="video/mp4" />
         </video>
         {/* Overlays */}
@@ -53,16 +56,16 @@ export default function Hero() {
             textShadow: "0 6px 40px rgba(0,0,0,0.7), 0 0 80px rgba(94,196,255,0.15)",
           }}
         >
-          NASCIDO
+          MODA FEITA
           <br />
-          <span style={{ color: "var(--lake-glow)" }}>À BEIRA</span>
+          <span style={{ color: "var(--lake-glow)" }}>PARA QUEM</span>
           <br />
-          DO LAGO
+          VIVE O LAGO
         </h1>
 
         {/* Subtitle */}
         <p className="text-[var(--cream)] text-base sm:text-lg md:text-xl font-light max-w-md mb-8 leading-relaxed opacity-95">
-          De atleta, para atleta. Moda que nasceu no Lago Paranoá e vive em quem rema, surfa e paddle.
+          De atleta, para atleta. Moda que nasceu no Lago Paranoá e vive em quem vive o Lago Paranoá.
         </p>
 
         {/* CTA Buttons */}
@@ -87,7 +90,7 @@ export default function Hero() {
         <div className="flex items-center gap-8 mt-10 pt-6 border-t border-[rgba(30,111,168,0.2)]">
           {[
             { num: "2021", label: "Fundada em" },
-            { num: "+500", label: "Atletas" },
+            { num: "DE ATLETA", label: "Para Atleta" },
             { num: "BSB", label: "Origem" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col">

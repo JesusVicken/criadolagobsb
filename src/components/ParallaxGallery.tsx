@@ -22,7 +22,7 @@ const panels: PanelData[] = [
   },
   {
     image: "/media/fotos/bone.jpg",
-    label: "Boné Trucker",
+    label: "Boné Cria do Lago",
     category: "Headwear",
     caption: "Tela respirável e a cara de Brasília.",
   },
@@ -258,15 +258,33 @@ export default function ParallaxGallery() {
         )
       )}
 
-      {/* End CTA Banner */}
-      <div className="relative z-10 py-20 sm:py-28 px-5 sm:px-8 text-center" style={{ background: "linear-gradient(to bottom, #080c10, #0a1018, #080c10)" }}>
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle, #5ec4ff 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-        <div className="relative z-10 max-w-2xl mx-auto">
-          <p className="text-[var(--lake-glow)] text-xs tracking-[0.35em] uppercase font-semibold mb-5">
+      {/* End CTA Banner with VIDEO background */}
+      <div className="relative z-10 py-28 sm:py-40 px-5 sm:px-8 text-center overflow-hidden">
+        {/* Background Video Layer */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            poster="/media/fotos/capa1.jpg"
+          >
+            <source src="/media/videos/videoCapaHero.mp4" type="video/mp4" />
+            <source src="/cria.mp4" type="video/mp4" />
+          </video>
+          {/* Dark Overlays for high text contrast and clear video visibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080c10] via-[#080c10]/70 to-[#080c10]/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(30,111,168,0.3)_0%,transparent_75%)]" />
+        </div>
+
+        <div className="relative z-10 max-w-3xl mx-auto">
+          <p className="text-[var(--lake-glow)] text-xs tracking-[0.35em] uppercase font-semibold mb-5 text-glow">
             Atendimento Exclusivo
           </p>
           <h2 style={{
-            fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(2.2rem, 7vw, 5.5rem)", lineHeight: "0.95", color: "white", marginBottom: "1.5rem",
+            fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(2.5rem, 7.5vw, 6rem)", lineHeight: "0.95", color: "white", marginBottom: "1.8rem",
+            textShadow: "0 4px 30px rgba(0,0,0,0.9)"
           }}>
             GARANTA A SUA
             <br />

@@ -75,7 +75,7 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               {[
                 { label: "Início", href: "#hero" },
-                { label: "Manifesto", href: "#manifesto" },
+                { label: "Use Cria", href: "#usecria" },
                 { label: "Coleção", href: "#colecao" },
                 { label: "Galeria", href: "#galeria" },
               ].map((link) => (

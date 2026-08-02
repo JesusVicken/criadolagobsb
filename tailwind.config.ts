@@ -24,7 +24,7 @@ const config: Config = {
         body: ["Space Grotesk", "Inter", "sans-serif"],
       },
       animation: {
-        marquee: "marquee 20s linear infinite",
+        marquee: "marquee 50s linear infinite",
         "fade-up": "fadeUp 0.8s ease forwards",
         "pulse-glow": "pulseGlow 2.5s ease-in-out infinite",
       },
