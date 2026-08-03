@@ -11,9 +11,14 @@ export default function Hero() {
       className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden"
     >
       {/* Background Video */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <SafariVideo
-          src={["/media/videos/hero.mp4", "/media/videos/videoCapaHero.mp4", "/media/videos/cria.mp4"]}
+          src={[
+            "/media/videos/cria.mp4", 
+            "/media/videos/hero.mp4", 
+            "/media/videos/videoCapaHero.mp4"
+          ]}
           poster="/media/fotos/capa1.jpg"
           className="absolute inset-0 w-full h-full object-cover"
         />
