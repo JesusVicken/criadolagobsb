@@ -1,4 +1,5 @@
 "use client";
+import SafariVideo from "./SafariVideo";
 
 const WHATS = "https://wa.me/5561992078620?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Cria%20do%20Lago%20e%20quero%20comprar%20um%20produto%20%F0%9F%9A%A3";
 const INSTA = "https://www.instagram.com/criadolagobsb";
@@ -11,20 +12,11 @@ export default function Hero() {
     >
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+        <SafariVideo
+          src={["/media/videos/videoCapaHero.mp4", "/media/videos/cria.mp4"]}
           poster="/media/fotos/capa1.jpg"
-        >
-          <source src="/hero.mp4" type="video/mp4" />
-          <source src="/media/videos/hero.mp4" type="video/mp4" />
-          <source src="/media/videos/cria.mp4" type="video/mp4" />
-          <source src="/media/videos/cria.mp4" type="video/mp4" />
-          <source src="/cria.mp4" type="video/mp4" />
-        </video>
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         {/* Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#080c10] via-[#080c10]/60 to-[#080c10]/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#080c10]/70 via-[#080c10]/20 to-transparent" />
@@ -89,7 +81,7 @@ export default function Hero() {
         {/* Stats */}
         <div className="flex items-center gap-8 mt-10 pt-6 border-t border-[rgba(30,111,168,0.2)]">
           {[
-            { num: "2021", label: "Fundada em" },
+            { num: "2025", label: "Fundada em" },
             { num: "DE ATLETA", label: "Para Atleta" },
             { num: "BSB", label: "Origem" },
           ].map((stat) => (

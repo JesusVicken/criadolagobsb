@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: "Cria do Lago — Moda Esportiva Aquática de Brasília",
   description:
     "De atleta, para atleta. A Cria do Lago nasceu à beira do lago Paranoá para quem vive e respira o esporte aquático em Brasília. Remo, SUP, Caiaque e muito estilo.",

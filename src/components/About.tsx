@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SafariVideo from "./SafariVideo";
 
 const INSTA = "https://www.instagram.com/criadolagobsb";
 
@@ -27,16 +28,11 @@ export default function About() {
               <div className="absolute -bottom-3 -right-3 w-full h-full border border-[var(--lake-glow)] opacity-15 pointer-events-none z-10" />
 
               {/* Video background with poster */}
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover"
+              <SafariVideo
+                src={["/media/videos/videoAbout.mp4"]}
                 poster="/media/editadas/about.png"
-              >
-                <source src="/media/videos/videoAbout.mp4" type="video/mp4" />
-              </video>
+                className="absolute inset-0 w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080c10]/60 via-transparent to-transparent" />
             </div>
 
@@ -44,7 +40,7 @@ export default function About() {
             <div className="absolute -bottom-6 -right-2 sm:-right-4 glass border-animated p-4 max-w-[160px] z-20">
               <span className="text-[var(--lake-glow)] text-xs tracking-widest uppercase block mb-1">Desde</span>
               <span className="font-display text-4xl text-white block" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                2021
+                2025
               </span>
               <span className="text-[var(--muted)] text-xs">Lago Paranoá, BSB</span>
             </div>
@@ -78,14 +74,14 @@ export default function About() {
               sabendo que o dia já valeu.
             </p>
             <p className="text-[var(--muted)] text-sm md:text-base leading-relaxed max-w-md">
-              Criamos peças pensadas para atletas de verdade — que suam no remo, no SUP e no caiaque —
-              e depois querem usar com orgulho o que carregam na pele.
+              Criamos peças pensadas para atletas e entusiastas do esporte — que vivem o Lago Paranoá
+              e carregam com orgulho na pele a marca que nasceu à beira d&apos;água.
             </p>
 
             <blockquote className="border-l-2 border-[var(--lake-glow)] pl-5 mt-2">
               <p className="text-white text-lg md:text-xl font-medium italic leading-snug">
                 &ldquo;Para quem é o estilo Cria?<br />
-                Para quem o lago é o lar.&rdquo;
+                Pra quem tem o Lago Paranoá como seu lar.&rdquo;
               </p>
             </blockquote>
 

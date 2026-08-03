@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useEffect, useState, useCallback } from "react";
 import Image from "next/image";
+import SafariVideo from "./SafariVideo";
 
 const WHATS = "https://wa.me/5561992078620?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Cria%20do%20Lago%20e%20tenho%20interesse%20em%20uma%20pe%C3%A7a%20%F0%9F%9A%A3";
 
@@ -92,9 +93,7 @@ function DesktopPanel({ panel, index, total }: { panel: PanelData; index: number
         >
           <div className="absolute inset-[-15%] will-change-transform" style={{ transform: `translateY(${imgY}px)` }}>
             {panel.video ? (
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover" poster={panel.image}>
-                <source src={panel.video} type="video/mp4" />
-              </video>
+              <SafariVideo src={[panel.video]} poster={panel.image} className="w-full h-full object-cover" />
             ) : (
               <Image src={panel.image} alt={panel.label} fill className="object-cover object-center" sizes="100vw" priority={index < 2} />
             )}
@@ -160,9 +159,7 @@ function MobilePanel({ panel, index, total }: { panel: PanelData; index: number;
       {/* Full BG */}
       <div className="absolute inset-0">
         {panel.video ? (
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover" poster={panel.image}>
-            <source src={panel.video} type="video/mp4" />
-          </video>
+          <SafariVideo src={[panel.video]} poster={panel.image} className="w-full h-full object-cover" />
         ) : (
           <Image src={panel.image} alt={panel.label} fill className="object-cover object-center" sizes="100vw" priority={index < 2} />
         )}
@@ -263,17 +260,11 @@ export default function ParallaxGallery() {
       <div className="relative z-10 py-28 sm:py-40 px-5 sm:px-8 text-center overflow-hidden">
         {/* Background Video Layer */}
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
+          <SafariVideo
+            src={["/media/videos/videoCapaHero.mp4", "/media/videos/cria.mp4"]}
             poster="/media/fotos/capa1.jpg"
-          >
-            <source src="/media/videos/videoCapaHero.mp4" type="video/mp4" />
-            <source src="/cria.mp4" type="video/mp4" />
-          </video>
+            className="w-full h-full object-cover"
+          />
           {/* Dark Overlays for high text contrast and clear video visibility */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#080c10] via-[#080c10]/70 to-[#080c10]/80" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(30,111,168,0.3)_0%,transparent_75%)]" />
