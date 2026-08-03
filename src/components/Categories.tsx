@@ -95,6 +95,8 @@ const productGroups: ProductGroup[] = [
     tag: "Vestuário",
     description: "Nossas blusinhas e tops mais desejados. Feitos com tecidos confortáveis de alta compressão para dar total liberdade de movimento.",
     images: [
+      "/media/fotos/blusinhasHeroPrincipal.jpeg",
+      "/media/fotos/blusinhaHero.jpeg",
       "/media/fotos/blusinha.jpg",
       "/media/fotos/blusinha2.jpg",
       "/media/fotos/blusinha3.jpg",

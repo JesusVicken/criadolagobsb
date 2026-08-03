@@ -49,7 +49,8 @@ const panels: PanelData[] = [
     caption: "Desempenho e estilo à beira do lago.",
   },
   {
-    image: "/media/fotos/blusinha.jpg",
+    image: "/media/fotos/blusinhasHeroPrincipal.jpeg",
+    video: "/media/videos/videoblusinha.mp4",
     label: "Top Feminino",
     category: "Feminino",
     caption: "Proteção e estilo pra remada.",

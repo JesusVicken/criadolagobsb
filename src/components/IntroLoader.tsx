@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import SafariVideo from "./SafariVideo";
 
 // Total intro duration in ms
 const INTRO_DURATION = 3400;
@@ -67,20 +68,12 @@ export default function IntroLoader() {
       }}
     >
       {/* ── Background video ── */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ opacity: 0.35 }}
-        // Suppress React hydration warnings for non-standard attrs
-        suppressHydrationWarning
-      >
-        <source src="/media/videos/cria2.mp4" type="video/mp4" />
-      </video>
+      <div className="absolute inset-0 opacity-35 z-0">
+        <SafariVideo
+          src={["/media/videos/cria2.mp4"]}
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Dark overlay so logo is readable */}
       <div className="absolute inset-0 bg-[#080c10]/55 z-[1]" />
