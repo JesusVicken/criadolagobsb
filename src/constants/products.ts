@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/blusaUVfem2.jpg",
       "/media/fotos/modelo5.jpg"
     ],
-    video: "/media/videos/blusaUV3.MP4",
+    video: "/media/videos/blusaUV3.mp4",
     inStock: true
   },
   {
