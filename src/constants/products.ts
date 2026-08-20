@@ -48,10 +48,10 @@ export const categoriesFilter: { key: CategoryKey; label: string }[] = [
   { key: "manga-longa", label: "Manga Longa UV" },
   { key: "cortavento", label: "Corta-Vento" },
   { key: "ponchos", label: "Ponchos" },
+  { key: "blusinhas", label: "Tops & Blusinhas" },
   { key: "bones", label: "Bonés" },
   { key: "viseiras", label: "Viseiras" },
   { key: "regatas", label: "Regatas" },
-  { key: "blusinhas", label: "Tops & Blusinhas" },
   { key: "blusas-masc", label: "Blusas Casual" },
   { key: "capas", label: "Acessórios & Capas" },
 ];
@@ -74,12 +74,14 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       "/media/fotos/blusaUVfemPrincipal.jpg",
+      "/media/fotos/blusaUvFeminina4.jpg",
+      "/media/fotos/blusaUvFeminina5.jpg",
       "/media/fotos/blusaUVfeminina.jpg",
       "/media/fotos/blusaUVfeminina1.jpg",
       "/media/fotos/blusaUVfeminina2.jpg",
       "/media/fotos/blusaUVfem.jpg",
       "/media/fotos/blusaUVfem2.jpg",
-      "/media/fotos/modelo5.jpg"
+      "/media/fotos/blusaUBfem3.jpg"
     ],
     video: "/media/videos/blusaUvFemPrincipal.mp4",
     inStock: true
@@ -103,7 +105,8 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/blusaUVmas.jpg",
       "/media/fotos/blusaUVmas2.jpg",
       "/media/fotos/blusaUVmas3.jpg",
-      "/media/fotos/blusaUVmas4.png"
+      "/media/fotos/blusaUVmas4.png",
+      "/media/fotos/modelo6.jpg"
     ],
     video: "/media/videos/cria.mp4",
     inStock: true
@@ -173,13 +176,87 @@ export const PRODUCTS: Product[] = [
       "Bolso canguru frontal utilitário",
       "Modelagem ampla para fácil troca de roupa"
     ],
-    images: [],
+    images: [
+      "/media/fotos/poncho2.jpg"
+    ],
     video: "/media/videos/poncho.mp4",
     inStock: true
   },
   {
+    id: "top-azul-fem",
+    name: "Top Azul Performance Cria",
+    category: "blusinhas",
+    categoryLabel: "Tops & Blusinhas",
+    tag: "Coleção Azul",
+    badge: "Lançamento",
+    sizes: ["P", "M", "G"],
+    description: "Top feminino azul de alta sustentação e acabamento macio. Modelagem ergonômica ideal para treinos de alta intensidade na água e corrida.",
+    features: [
+      "Tecido de alta compressão confortável",
+      "Sustentação ideal sem prender a respiração",
+      "Tecnologia de rápida secagem",
+      "Proteção UV30+ e resistência ao cloro/sal"
+    ],
+    images: [
+      "/media/fotos/topAzul.jpg",
+      "/media/fotos/topAzul2.jpg",
+      "/media/fotos/topAzul3.jpg",
+      "/media/fotos/topAzul4.jpg",
+      "/media/fotos/topAzul5.jpg",
+      "/media/fotos/topAzul6.jpg"
+    ],
+    video: "/media/videos/topverde2.mp4",
+    inStock: true
+  },
+  {
+    id: "top-laranja-fem",
+    name: "Top Laranja Performance Cria",
+    category: "blusinhas",
+    categoryLabel: "Tops & Blusinhas",
+    tag: "Coleção Laranja",
+    badge: "Destaque",
+    sizes: ["P", "M", "G"],
+    description: "Top feminino na cor laranja vibrante, desenvolvido em malha elástica de alta sustentação para se destacar com energia e segurança no lago.",
+    features: [
+      "Cor vibrante com alta visibilidade na água",
+      "Proteção solar e secagem ultrarrápida",
+      "Corte anatômico anti-atrito",
+      "Costuras reforçadas"
+    ],
+    images: [
+      "/media/fotos/topLaranja.jpg",
+      "/media/fotos/topLaranja2.jpg",
+      "/media/fotos/topLaranja3.jpg",
+      "/media/fotos/topLaranja4.jpg"
+    ],
+    inStock: true
+  },
+  {
+    id: "top-claro-fem",
+    name: "Top Light Off-White Cria",
+    category: "blusinhas",
+    categoryLabel: "Tops & Blusinhas",
+    tag: "Coleção Light",
+    badge: "Edição Limitada",
+    sizes: ["P", "M", "G"],
+    description: "Top em tom claro minimalista com toque aveludado e caimento elegante para moments no remo, praia ou dia a dia.",
+    features: [
+      "Tom claro minimalista elegante",
+      "Toque aveludado macio",
+      "Alta respirabilidade",
+      "Modelagem anatômica confort"
+    ],
+    images: [
+      "/media/fotos/topclaro.jpg",
+      "/media/fotos/topclaro2.jpg",
+      "/media/fotos/topclaro3.jpg",
+      "/media/fotos/topclaro4"
+    ],
+    inStock: true
+  },
+  {
     id: "top-cria-fem",
-    name: "Top & Blusinha Cria do Lago",
+    name: "Top & Blusinha Verde Cria",
     category: "blusinhas",
     categoryLabel: "Tops & Blusinhas",
     tag: "Vestuário",
@@ -195,8 +272,10 @@ export const PRODUCTS: Product[] = [
     images: [
       "/media/fotos/topPrincipal.jpeg",
       "/media/fotos/top.jpg",
+      "/media/fotos/top2.jpg",
       "/media/fotos/top3.jpg",
       "/media/fotos/top4.jpg",
+      "/media/fotos/top5.jpg",
       "/media/fotos/top5.png",
       "/media/fotos/top6.jpg",
       "/media/fotos/topVerde.jpeg",
@@ -272,6 +351,7 @@ export const PRODUCTS: Product[] = [
       "Faixa interna antitranspirante"
     ],
     images: [
+      "/media/fotos/bonePrincipal.jpg",
       "/media/fotos/bone.jpg",
       "/media/fotos/bone2.jpg",
       "/media/fotos/bone3.jpg",
@@ -348,7 +428,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       "/media/fotos/capa1.jpg",
-      "/media/fotos/capa2.jpeg"
+      "/media/fotos/capa2.jpeg",
+      "/media/fotos/capa2.jpg"
     ],
     video: "/media/videos/capaRemo.mp4",
     inStock: true
