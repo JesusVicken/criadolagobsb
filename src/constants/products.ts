@@ -132,7 +132,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/cortaventoFem5.jpg",
       "/media/fotos/cortaventoFem6.jpg"
     ],
-    video: "/media/videos/cortavento2.mp4",
+    video: "/media/videos/cortaventoPrincipalFem.mp4",
     inStock: true
   },
   {
@@ -204,7 +204,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/topVerde3.jpeg",
       "/media/fotos/topVerde4.jpeg"
     ],
-    video: "/media/videos/videoblusinha.mp4",
+    video: "/media/videos/topverde.mp4",
     inStock: true
   },
   {
@@ -257,29 +257,6 @@ export const PRODUCTS: Product[] = [
     inStock: true
   },
   {
-    id: "viseira-cria",
-    name: "Viseira Performance Cria do Lago",
-    category: "viseiras",
-    categoryLabel: "Viseiras",
-    tag: "Headwear",
-    badge: "Lançamento",
-    sizes: ["Tamanho Único"],
-    description: "Viseira anatômica com faixa de absorção de suor para alta intensidade no remo e corrida. Mantém a visão limpa e cabeça fresca sob o sol.",
-    features: [
-      "Super leve (menos de 40 gramas)",
-      "Ajuste em velcro macio sem machucar",
-      "Absorção de suor de secagem rápida",
-      "Aba com formato anti-reflexo"
-    ],
-    images: [
-      "/media/fotos/viseiraPrincipal.jpg",
-      "/media/fotos/viseira1.jpg",
-      "/media/fotos/viseira2.jpg",
-      "/media/fotos/viseira3.jpg"
-    ],
-    inStock: true
-  },
-  {
     id: "bone-cria",
     name: "Boné Trucker Cria do Lago",
     category: "bones",
@@ -305,6 +282,31 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/bone8.jpg",
       "/media/fotos/bone9.jpg"
     ],
+    video: "/media/videos/bone.mp4",
+    inStock: true
+  },
+  {
+    id: "viseira-cria",
+    name: "Viseira Performance Cria do Lago",
+    category: "viseiras",
+    categoryLabel: "Viseiras",
+    tag: "Headwear",
+    badge: "Lançamento",
+    sizes: ["Tamanho Único"],
+    description: "Viseira anatômica com faixa de absorção de suor para alta intensidade no remo e corrida. Mantém a visão limpa e cabeça fresca sob o sol.",
+    features: [
+      "Super leve (menos de 40 gramas)",
+      "Ajuste em velcro macio sem machucar",
+      "Absorção de suor de secagem rápida",
+      "Aba com formato anti-reflexo"
+    ],
+    images: [
+      "/media/fotos/viseiraPrincipal.jpg",
+      "/media/fotos/viseira1.jpg",
+      "/media/fotos/viseira2.jpg",
+      "/media/fotos/viseira3.jpg"
+    ],
+    video: "/media/videos/Criadolago.mp4",
     inStock: true
   },
   {
@@ -326,6 +328,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/blusaMasc.jpg",
       "/media/fotos/blusaMasc2.jpg"
     ],
+    video: "/media/videos/cria2.mp4",
     inStock: true
   },
   {
@@ -347,7 +350,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/capa1.jpg",
       "/media/fotos/capa2.jpeg"
     ],
-    video: "/media/videos/capa.mp4",
+    video: "/media/videos/capaRemo.mp4",
     inStock: true
   }
 ];
