@@ -73,6 +73,7 @@ export const PRODUCTS: Product[] = [
       "Alta compressão confortável"
     ],
     images: [
+      "/media/fotos/blusaUVfemPrincipal.jpg",
       "/media/fotos/blusaUVfeminina.jpg",
       "/media/fotos/blusaUVfeminina1.jpg",
       "/media/fotos/blusaUVfeminina2.jpg",
@@ -104,7 +105,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/blusaUVmas3.jpg",
       "/media/fotos/blusaUVmas4.png"
     ],
-    video: "/media/videos/blusaUV3.mp4",
+    video: "/media/videos/cria.mp4",
     inStock: true
   },
   {
@@ -154,7 +155,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/cortaventoMasc2.jpg",
       "/media/fotos/cortaventoMasc3.jpg"
     ],
-    video: "/media/videos/Criadolago.mp4",
+    video: "/media/videos/cortavento.mp4",
     inStock: true
   },
   {
@@ -225,8 +226,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/regataFem.jpg",
       "/media/fotos/regataFem2.jpg",
       "/media/fotos/regataFem3.jpg",
-      "/media/fotos/regataFem4.jpg",
-      "/media/fotos/regata2.png"
+      "/media/fotos/regataFem4.jpg"
     ],
     video: "/media/videos/regata.mp4",
     inStock: true
@@ -250,9 +250,33 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/regataMasc4.jpg",
       "/media/fotos/regataMasc.jpg",
       "/media/fotos/regataMasc2.jpg",
-      "/media/fotos/regataMasc3.jpg"
+      "/media/fotos/regataMasc3.jpg",
+      "/media/fotos/regataMasc3.png"
     ],
-    video: "/media/videos/Criadolago.mp4",
+    video: "/media/videos/regataMascPrincipal.mov",
+    inStock: true
+  },
+  {
+    id: "viseira-cria",
+    name: "Viseira Performance Cria do Lago",
+    category: "viseiras",
+    categoryLabel: "Viseiras",
+    tag: "Headwear",
+    badge: "Lançamento",
+    sizes: ["Tamanho Único"],
+    description: "Viseira anatômica com faixa de absorção de suor para alta intensidade no remo e corrida. Mantém a visão limpa e cabeça fresca sob o sol.",
+    features: [
+      "Super leve (menos de 40 gramas)",
+      "Ajuste em velcro macio sem machucar",
+      "Absorção de suor de secagem rápida",
+      "Aba com formato anti-reflexo"
+    ],
+    images: [
+      "/media/fotos/viseiraPrincipal.jpg",
+      "/media/fotos/viseira1.jpg",
+      "/media/fotos/viseira2.jpg",
+      "/media/fotos/viseira3.jpg"
+    ],
     inStock: true
   },
   {
@@ -284,27 +308,6 @@ export const PRODUCTS: Product[] = [
     inStock: true
   },
   {
-    id: "viseira-cria",
-    name: "Viseira Performance Cria do Lago",
-    category: "viseiras",
-    categoryLabel: "Viseiras",
-    tag: "Headwear",
-    badge: "Lançamento",
-    sizes: ["Tamanho Único"],
-    description: "Viseira anatômica com faixa de absorção de suor para alta intensidade no remo e corrida. Mantém a visão limpa e cabeça fresca sob o sol.",
-    features: [
-      "Super leve (menos de 40 gramas)",
-      "Ajuste em velcro macio sem machucar",
-      "Absorção de suor de secagem rápida",
-      "Aba com formato anti-reflexo"
-    ],
-    images: [
-      "/media/fotos/viseira1.jpg",
-      "/media/fotos/viseira2.jpg"
-    ],
-    inStock: true
-  },
-  {
     id: "blusa-masc",
     name: "Blusa Casual Masculina",
     category: "blusas-masc",
@@ -320,7 +323,8 @@ export const PRODUCTS: Product[] = [
       "Estampa com identidade Cria do Lago"
     ],
     images: [
-      "/media/fotos/blusaMasc.jpg"
+      "/media/fotos/blusaMasc.jpg",
+      "/media/fotos/blusaMasc2.jpg"
     ],
     inStock: true
   },

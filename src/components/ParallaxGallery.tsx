@@ -42,8 +42,8 @@ const panels: PanelData[] = [
     caption: "Modelagem leve e anatômica. Liberdade total para remada e alta mobilidade.",
   },
   {
-    image: "/media/fotos/blusaUVfeminina.jpg",
-    video: "/media/videos/blusaUV3.mp4",
+    image: "/media/fotos/blusaUVfemPrincipal.jpg",
+    video: "/media/videos/blusaUvFemPrincipal.mp4",
     label: "Manga Longa UV50+",
     category: "Proteção Solar",
     caption: "Fator solar UV50+ certificado para encarar o sol forte da água do início ao fim do treino.",

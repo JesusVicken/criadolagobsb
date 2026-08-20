@@ -71,7 +71,12 @@ export default function SafariVideo({ src, poster, className = "" }: SafariVideo
       class="w-full h-full object-cover pointer-events-none ${className}"
       style="pointer-events: none; -webkit-touch-callout: none;"
     >
-      ${sources.map((s) => `<source src="${s}" type="video/mp4" />`).join("")}
+      ${sources
+        .map((s) => {
+          const type = s.toLowerCase().endsWith(".mov") ? "video/quicktime" : "video/mp4";
+          return `<source src="${s}" type="${type}" />`;
+        })
+        .join("")}
     </video>
   `.trim();
 
