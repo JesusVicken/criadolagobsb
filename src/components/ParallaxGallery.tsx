@@ -35,15 +35,8 @@ const panels: PanelData[] = [
     caption: "Tela respirável, aba curvada estruturada e a autêntica identidade Cria do Lago.",
   },
   {
-    image: "/media/fotos/regataFem.jpg",
-    video: "/media/videos/regata.mp4",
-    label: "Regata Feminina Performance",
-    category: "Vestuário",
-    caption: "Modelagem leve e anatômica. Liberdade total para remada e alta mobilidade.",
-  },
-  {
     image: "/media/fotos/regataMasc.jpg",
-    video: "/media/videos/regataMascPrincipal.mp4",
+    video: "/media/videos/regata.mp4",
     label: "Regata Masculina Cria",
     category: "Vestuário Masculino",
     caption: "Corte atlético de alta respirabilidade e mobilidade para expedições e treinos no lago.",
