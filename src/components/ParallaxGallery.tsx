@@ -29,14 +29,14 @@ const panels: PanelData[] = [
   },
   {
     image: "/media/fotos/bone.jpg",
-    video: "/media/videos/cortavento.MP4",
+    video: "/media/videos/cortavento.mp4",
     label: "Boné Trucker Cria",
     category: "Headwear",
     caption: "Tela respirável, aba curvada estruturada e a autêntica identidade Cria do Lago.",
   },
   {
     image: "/media/fotos/regataFem.jpg",
-    video: "/media/videos/regata.MP4",
+    video: "/media/videos/regata.mp4",
     label: "Regatas de Performance",
     category: "Vestuário",
     caption: "Modelagem leve e anatômica. Liberdade total para remada e alta mobilidade.",

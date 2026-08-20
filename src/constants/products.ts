@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/blusaUVfem2.jpg",
       "/media/fotos/modelo5.jpg"
     ],
-    video: "/media/videos/blusaUV3.mp4",
+    video: "/media/videos/blusaUvFemPrincipal.mp4",
     inStock: true
   },
   {
@@ -102,9 +102,9 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/blusaUVmas.jpg",
       "/media/fotos/blusaUVmas2.jpg",
       "/media/fotos/blusaUVmas3.jpg",
-      "/media/fotos/modelo6.jpg"
+      "/media/fotos/blusaUVmas4.png"
     ],
-    video: "/media/videos/cria.mp4",
+    video: "/media/videos/blusaUV3.mp4",
     inStock: true
   },
   {
@@ -131,7 +131,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/cortaventoFem5.jpg",
       "/media/fotos/cortaventoFem6.jpg"
     ],
-    video: "/media/videos/cortavento2.MP4",
+    video: "/media/videos/cortavento2.mp4",
     inStock: true
   },
   {
@@ -154,7 +154,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/cortaventoMasc2.jpg",
       "/media/fotos/cortaventoMasc3.jpg"
     ],
-    video: "/media/videos/cortavento.MP4",
+    video: "/media/videos/Criadolago.mp4",
     inStock: true
   },
   {
@@ -228,7 +228,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/regataFem4.jpg",
       "/media/fotos/regata2.png"
     ],
-    video: "/media/videos/regata.MP4",
+    video: "/media/videos/regata.mp4",
     inStock: true
   },
   {
