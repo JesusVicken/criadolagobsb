@@ -22,8 +22,11 @@ function ProductCard({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
 
+  const videoList = product.videos || (product.video ? [product.video] : []);
+  const numVideos = videoList.length;
   const hasImages = product.images && product.images.length > 0;
-  const totalSlides = (hasImages ? product.images.length : 0) + (product.video ? 1 : 0);
+  const numImages = hasImages ? product.images.length : 0;
+  const totalSlides = numVideos + numImages;
 
   const handleNext = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
@@ -57,15 +60,15 @@ function ProductCard({
   };
 
   // Determine active media to show
-  // Index 0 plays video if video exists, otherwise photo at currentIndex
-  const isVideoSlide = product.video && currentIndex === 0;
-  const photoIndex = product.video ? currentIndex - 1 : currentIndex;
+  const isVideoSlide = currentIndex < numVideos;
+  const currentVideo = isVideoSlide ? videoList[currentIndex] : null;
+  const photoIndex = currentIndex - numVideos;
   const currentImg = hasImages ? (product.images[photoIndex] || product.images[0]) : "";
 
   const whatsAppLink = buildWhatsAppLink(
     product.name,
     product.sizes[0],
-    isVideoSlide ? product.video : currentImg
+    isVideoSlide ? currentVideo! : currentImg
   );
 
   return (
@@ -77,9 +80,10 @@ function ProductCard({
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {isVideoSlide ? (
+        {isVideoSlide && currentVideo ? (
           <SafariVideo
-            src={[product.video!]}
+            key={currentVideo}
+            src={[currentVideo]}
             poster={product.images[0] || ""}
             className="w-full h-full object-cover"
           />
@@ -116,7 +120,7 @@ function ProductCard({
         {totalSlides > 1 ? (
           <div className="absolute top-3 right-3 z-10 pointer-events-none">
             <span className="text-[9px] font-mono tracking-wider text-white/90 bg-[#080c10]/90 px-2 py-0.5 rounded-[2px] border border-white/10">
-              {isVideoSlide ? "▶ VÍDEO" : `${currentIndex + 1}/${totalSlides}`}
+              {isVideoSlide ? `▶ VÍDEO ${numVideos > 1 ? currentIndex + 1 : ""}` : `${currentIndex + 1}/${totalSlides}`}
             </span>
           </div>
         ) : isVideoSlide ? (

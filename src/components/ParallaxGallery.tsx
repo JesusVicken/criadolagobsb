@@ -91,7 +91,7 @@ export default function ParallaxGallery() {
         {panels.map((panel, idx) => (
           <article
             key={idx}
-            className="sticky top-0 h-[100vh] w-full overflow-hidden flex flex-col justify-end bg-[#080c10] shadow-[0_-15px_60px_rgba(0,0,0,0.9)] border-t border-[rgba(94,196,255,0.15)]"
+            className="sticky top-0 min-h-[100vh] sm:min-h-[110vh] w-full overflow-hidden flex flex-col justify-end bg-[#080c10] shadow-[0_-15px_60px_rgba(0,0,0,0.9)] border-t border-[rgba(94,196,255,0.15)]"
             style={{ zIndex: 10 + idx }}
           >
             {/* Fullscreen Video Background */}
@@ -99,12 +99,12 @@ export default function ParallaxGallery() {
               <SafariVideo
                 src={[panel.video]}
                 poster={panel.image}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[center_30%]"
               />
 
               {/* Gradient overlays for high text contrast */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080c10] via-[#080c10]/60 to-[#080c10]/20" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#080c10]/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080c10] via-[#080c10]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#080c10]/70 via-transparent to-transparent" />
             </div>
 
             {/* Glass Badge Counter */}

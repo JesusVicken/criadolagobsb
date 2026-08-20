@@ -15,11 +15,19 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
   const [selectedSize, setSelectedSize] = useState<string>("");
   const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
 
-  if (!product) return null;
+  const videoList = product.videos || (product.video ? [product.video] : []);
+  const numVideos = videoList.length;
+  const isVideoSelected = selectedImageIndex < numVideos;
+  const currentVideo = isVideoSelected ? videoList[selectedImageIndex] : null;
+  const photoIndex = selectedImageIndex - numVideos;
+  const currentImg = !isVideoSelected ? (product.images[photoIndex] || product.images[0]) : (product.images[0] || "");
 
   const activeSize = selectedSize || product.sizes[0] || "";
-  const currentImg = product.images[selectedImageIndex] || product.images[0];
-  const whatsAppLink = buildWhatsAppLink(product.name, activeSize, currentImg);
+  const whatsAppLink = buildWhatsAppLink(
+    product.name,
+    activeSize,
+    isVideoSelected ? currentVideo! : currentImg
+  );
 
   return (
     <>
@@ -43,13 +51,14 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           {/* Left Column: Media Gallery */}
           <div className="w-full md:w-1/2 flex flex-col bg-[#080c10] relative">
             <div className="relative aspect-[4/5] w-full overflow-hidden">
-              {product.video && selectedImageIndex === 0 ? (
+              {isVideoSelected && currentVideo ? (
                 <SafariVideo
-                  src={[product.video]}
-                  poster={currentImg}
+                  key={currentVideo}
+                  src={[currentVideo]}
+                  poster={product.images[0] || ""}
                   className="w-full h-full object-cover"
                 />
-              ) : (
+              ) : currentImg ? (
                 <Image
                   src={currentImg}
                   alt={product.name}
@@ -58,6 +67,10 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-[var(--muted)] text-xs">
+                  Foto em breve
+                </div>
               )}
 
               {/* Tag / Badge */}
@@ -73,22 +86,44 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
               </div>
             </div>
 
-            {/* Thumbnails */}
-            {product.images.length > 1 && (
+            {/* Thumbnails (Videos + Images) */}
+            {(numVideos + product.images.length) > 1 && (
               <div className="p-3 flex items-center gap-2 overflow-x-auto bg-[#0b0f17] border-t border-[var(--border)]">
-                {product.images.map((img, i) => (
+                {videoList.map((v, idx) => (
                   <button
-                    key={i}
-                    onClick={() => setSelectedImageIndex(i)}
-                    className={`relative w-14 h-14 shrink-0 rounded-sm overflow-hidden border-2 transition-all ${
-                      selectedImageIndex === i
+                    key={`v-${idx}`}
+                    onClick={() => setSelectedImageIndex(idx)}
+                    className={`relative w-14 h-14 shrink-0 rounded-sm overflow-hidden border-2 transition-all flex items-center justify-center bg-[#080c10] ${
+                      selectedImageIndex === idx
                         ? "border-[var(--lake-glow)] opacity-100 scale-105"
                         : "border-transparent opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <Image src={img} alt={`Opção ${i + 1}`} fill className="object-cover" sizes="56px" />
+                    {product.images[0] ? (
+                      <Image src={product.images[0]} alt={`Vídeo ${idx + 1}`} fill className="object-cover opacity-50" sizes="56px" />
+                    ) : null}
+                    <span className="relative z-10 text-[9px] font-bold tracking-widest text-[var(--lake-glow)] bg-[#080c10]/90 px-1 py-0.5 rounded border border-[var(--lake-glow)]/40">
+                      ▶ VÍDEO {numVideos > 1 ? idx + 1 : ""}
+                    </span>
                   </button>
                 ))}
+
+                {product.images.map((img, i) => {
+                  const slideIdx = numVideos + i;
+                  return (
+                    <button
+                      key={`img-${i}`}
+                      onClick={() => setSelectedImageIndex(slideIdx)}
+                      className={`relative w-14 h-14 shrink-0 rounded-sm overflow-hidden border-2 transition-all ${
+                        selectedImageIndex === slideIdx
+                          ? "border-[var(--lake-glow)] opacity-100 scale-105"
+                          : "border-transparent opacity-60 hover:opacity-100"
+                      }`}
+                    >
+                      <Image src={img} alt={`Opção ${i + 1}`} fill className="object-cover" sizes="56px" />
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>

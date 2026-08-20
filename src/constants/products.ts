@@ -22,6 +22,7 @@ export interface Product {
   features: string[];
   images: string[];
   video?: string;
+  videos?: string[];
   inStock: boolean;
 }
 
@@ -84,6 +85,11 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/blusaUVfeminina2.jpg"
     ],
     video: "/media/videos/blusaUvFemPrincipal.mp4",
+    videos: [
+      "/media/videos/blusaUvFemPrincipal.mp4",
+      "/media/videos/blusaUvFem.mp4",
+      "/media/videos/blusaUvFem2.mp4"
+    ],
     inStock: true
   },
   {
@@ -157,6 +163,11 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/cortaventoMasc3.jpg"
     ],
     video: "/media/videos/cortaventoMasc.mp4",
+    videos: [
+      "/media/videos/cortaventoMasc.mp4",
+      "/media/videos/cortaventoMasc2.mp4",
+      "/media/videos/cortaventoMasc3.mp4"
+    ],
     inStock: true
   },
   {
@@ -178,6 +189,10 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/poncho2.jpg"
     ],
     video: "/media/videos/poncho.mp4",
+    videos: [
+      "/media/videos/poncho.mp4",
+      "/media/videos/poncho2.mp4"
+    ],
     inStock: true
   },
   {
@@ -259,7 +274,6 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/topAzul5.jpg",
       "/media/fotos/topAzul6.jpg"
     ],
-    video: "/media/videos/topverde2.mp4",
     inStock: true
   },
   {
@@ -278,12 +292,12 @@ export const PRODUCTS: Product[] = [
       "Costuras reforçadas"
     ],
     images: [
+      "/media/fotos/topPrincipal.jpeg",
       "/media/fotos/topLaranja.jpg",
       "/media/fotos/topLaranja2.jpg",
       "/media/fotos/topLaranja3.jpg",
       "/media/fotos/topLaranja4.jpg"
     ],
-    video: "/media/videos/topverde.mp4",
     inStock: true
   },
   {
@@ -386,7 +400,6 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/viseira2.jpg",
       "/media/fotos/viseira3.jpg"
     ],
-    video: "/media/videos/cria.mp4",
     inStock: true
   },
   {
@@ -408,7 +421,6 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/blusaMasc.jpg",
       "/media/fotos/blusaMasc2.jpg"
     ],
-    video: "/media/videos/cria2.mp4",
     inStock: true
   },
   {
