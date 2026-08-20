@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://criadolago.com.br/sitemap.xml
