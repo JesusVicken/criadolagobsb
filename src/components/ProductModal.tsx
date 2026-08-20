@@ -15,6 +15,8 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
   const [selectedSize, setSelectedSize] = useState<string>("");
   const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
 
+  if (!product) return null;
+
   const videoList = product.videos || (product.video ? [product.video] : []);
   const numVideos = videoList.length;
   const isVideoSelected = selectedImageIndex < numVideos;
