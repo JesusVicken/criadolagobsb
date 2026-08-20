@@ -3,6 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://criadolago.com.br"),
+  alternates: {
+    canonical: "https://criadolago.com.br",
+  },
   title: "Cria do Lago · Cria · Moda Esportiva & Roupas Aquáticas de Brasília",
   description:
     "Cria do Lago (Cria) — Marca oficial de moda esportiva e roupas de treino no Lago Paranoá em Brasília. Corta-vento, Manga Longa UV50+, Regatas, Tops e Poncho Toalha.",
