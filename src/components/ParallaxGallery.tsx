@@ -163,7 +163,7 @@ export default function ParallaxGallery() {
         {/* Video Background Layer */}
         <div className="absolute inset-0 z-0">
           <SafariVideo
-            src={["/media/videos/Criadolago.mp4", "/media/videos/videoCapaHero.mp4"]}
+            src={["/media/videos/videocriadoLago.mp4", "/media/videos/videoCapaHero.mp4"]}
             poster="/media/fotos/capa1.jpg"
             className="w-full h-full object-cover"
           />

@@ -165,8 +165,7 @@ export const PRODUCTS: Product[] = [
     video: "/media/videos/cortaventoMasc.mp4",
     videos: [
       "/media/videos/cortaventoMasc.mp4",
-      "/media/videos/cortaventoMasc2.mp4",
-      "/media/videos/cortaventoMasc3.mp4"
+      "/media/videos/cortaventoMasc2.mp4"
     ],
     inStock: true
   },
