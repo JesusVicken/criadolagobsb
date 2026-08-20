@@ -73,15 +73,15 @@ export const PRODUCTS: Product[] = [
       "Alta compressão confortável"
     ],
     images: [
-      "/media/fotos/blusaUVfemPrincipal.jpg",
-      "/media/fotos/blusaUvFeminina4.jpg",
-      "/media/fotos/blusaUvFeminina5.jpg",
-      "/media/fotos/blusaUVfeminina.jpg",
-      "/media/fotos/blusaUVfeminina1.jpg",
-      "/media/fotos/blusaUVfeminina2.jpg",
+      "/media/fotos/blusaUvFemininaNovaPrincipal.jpg",
+      "/media/fotos/blusaUvFemininaNova.jpg",
+      "/media/fotos/blusaUvFemininaNova2.jpg",
+      "/media/fotos/blusaUvFemininaNova4.jpg",
+      "/media/fotos/blusaUvFemininaNova5.jpg",
       "/media/fotos/blusaUVfem.jpg",
       "/media/fotos/blusaUVfem2.jpg",
-      "/media/fotos/blusaUBfem3.jpg"
+      "/media/fotos/blusaUVfem3.jpg",
+      "/media/fotos/blusaUVfeminina2.jpg"
     ],
     video: "/media/videos/blusaUvFemPrincipal.mp4",
     inStock: true
@@ -102,13 +102,12 @@ export const PRODUCTS: Product[] = [
       "Gola anatômica de cobertura do pescoço"
     ],
     images: [
-      "/media/fotos/blusaUVmas.jpg",
-      "/media/fotos/blusaUVmas2.jpg",
-      "/media/fotos/blusaUVmas3.jpg",
-      "/media/fotos/blusaUVmas4.png",
-      "/media/fotos/modelo6.jpg"
+      "/media/fotos/blusaUvMascuPrincipal.jpg",
+      "/media/fotos/blusaUvMascu.jpg",
+      "/media/fotos/blusaUvMascu2.jpg",
+      "/media/fotos/blusaUvMascu3.jpg"
     ],
-    video: "/media/videos/cria.mp4",
+    video: "/media/videos/blusaUVMasc.mp4",
     inStock: true
   },
   {
@@ -132,10 +131,9 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/cortaventoFem2.jpg",
       "/media/fotos/cortaventoFem3.jpg",
       "/media/fotos/cortaventoFem4.jpg",
-      "/media/fotos/cortaventoFem5.jpg",
-      "/media/fotos/cortaventoFem6.jpg"
+      "/media/fotos/cortaventoFem5.jpg"
     ],
-    video: "/media/videos/cortaventoPrincipalFem.mp4",
+    video: "/media/videos/cortaventoFem.mp4",
     inStock: true
   },
   {
@@ -158,7 +156,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/cortaventoMasc2.jpg",
       "/media/fotos/cortaventoMasc3.jpg"
     ],
-    video: "/media/videos/cortavento.mp4",
+    video: "/media/videos/cortaventoMasc.mp4",
     inStock: true
   },
   {
@@ -180,6 +178,62 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/poncho2.jpg"
     ],
     video: "/media/videos/poncho.mp4",
+    inStock: true
+  },
+  {
+    id: "top-verde-fem",
+    name: "Top & Blusinha Verde Cria",
+    category: "blusinhas",
+    categoryLabel: "Tops & Blusinhas",
+    tag: "Coleção Verde",
+    badge: "Mais Vendido",
+    sizes: ["P", "M", "G"],
+    description: "Peça essencial para treinos aquáticos e ao ar livre na tonalidade verde icônica Cria do Lago. Sustentação perfeita com toque aveludado e macio.",
+    features: [
+      "Alta sustentação sem apertar",
+      "Tecido respirável e leve",
+      "Decote anatômico para liberdade de braços",
+      "Proteção UV30+"
+    ],
+    images: [
+      "/media/fotos/topVerdePrincipal.png",
+      "/media/fotos/topVerde.jpg",
+      "/media/fotos/topVerde2.jpg",
+      "/media/fotos/topVerde3.jpg",
+      "/media/fotos/topVerde4.jpg",
+      "/media/fotos/topVerde5.jpg",
+      "/media/fotos/topVerde6.jpg",
+      "/media/fotos/topPrincipal.jpeg"
+    ],
+    video: "/media/videos/topVerde.mp4",
+    inStock: true
+  },
+  {
+    id: "top-verde-claro-fem",
+    name: "Top Verde Claro Performance Cria",
+    category: "blusinhas",
+    categoryLabel: "Tops & Blusinhas",
+    tag: "Coleção Verde Claro",
+    badge: "Lançamento",
+    sizes: ["P", "M", "G"],
+    description: "Top em tom verde claro sofisticado com acabamento suave e ajuste anatômico para dias ensolarados de remada e treinos no lago.",
+    features: [
+      "Tom verde claro elegante e exclusivo",
+      "Toque aveludado com leveza",
+      "Respirabilidade para treinos intensos",
+      "Modelagem anatômica confort"
+    ],
+    images: [
+      "/media/fotos/topVerdeclaroPrincipal.jpg",
+      "/media/fotos/topVerdeclaro.jpg",
+      "/media/fotos/topVerdeclaro2.jpg",
+      "/media/fotos/topVerdeclaro3.jpg",
+      "/media/fotos/topVerdeclaro4.jpg",
+      "/media/fotos/topVerdeclaro5.jpg",
+      "/media/fotos/topVerdeclaro6.jpg",
+      "/media/fotos/topVerdeclaro7.jpg"
+    ],
+    video: "/media/videos/topVerdeClaro.mp4",
     inStock: true
   },
   {
@@ -229,60 +283,6 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/topLaranja3.jpg",
       "/media/fotos/topLaranja4.jpg"
     ],
-    inStock: true
-  },
-  {
-    id: "top-claro-fem",
-    name: "Top Light Off-White Cria",
-    category: "blusinhas",
-    categoryLabel: "Tops & Blusinhas",
-    tag: "Coleção Light",
-    badge: "Edição Limitada",
-    sizes: ["P", "M", "G"],
-    description: "Top em tom claro minimalista com toque aveludado e caimento elegante para moments no remo, praia ou dia a dia.",
-    features: [
-      "Tom claro minimalista elegante",
-      "Toque aveludado macio",
-      "Alta respirabilidade",
-      "Modelagem anatômica confort"
-    ],
-    images: [
-      "/media/fotos/topclaro.jpg",
-      "/media/fotos/topclaro2.jpg",
-      "/media/fotos/topclaro3.jpg",
-      "/media/fotos/topclaro4"
-    ],
-    inStock: true
-  },
-  {
-    id: "top-cria-fem",
-    name: "Top & Blusinha Verde Cria",
-    category: "blusinhas",
-    categoryLabel: "Tops & Blusinhas",
-    tag: "Vestuário",
-    badge: "Edição Limitada",
-    sizes: ["P", "M", "G"],
-    description: "Peça essencial para treinos aquáticos e ao ar livre. Tecido macio com elasticidade bidirecional para sustentação perfeita e conforto zero atrito.",
-    features: [
-      "Alta sustentação sem apertar",
-      "Tecido respirável e leve",
-      "Decote anatômico para liberdade de braços",
-      "Proteção UV30+"
-    ],
-    images: [
-      "/media/fotos/topPrincipal.jpeg",
-      "/media/fotos/top.jpg",
-      "/media/fotos/top2.jpg",
-      "/media/fotos/top3.jpg",
-      "/media/fotos/top4.jpg",
-      "/media/fotos/top5.jpg",
-      "/media/fotos/top5.png",
-      "/media/fotos/top6.jpg",
-      "/media/fotos/topVerde.jpeg",
-      "/media/fotos/topVerde2.jpeg",
-      "/media/fotos/topVerde3.jpeg",
-      "/media/fotos/topVerde4.jpeg"
-    ],
     video: "/media/videos/topverde.mp4",
     inStock: true
   },
@@ -326,13 +326,13 @@ export const PRODUCTS: Product[] = [
       "Resistência à fricção do colete/remo"
     ],
     images: [
-      "/media/fotos/regataMasc4.jpg",
       "/media/fotos/regataMasc.jpg",
       "/media/fotos/regataMasc2.jpg",
       "/media/fotos/regataMasc3.jpg",
+      "/media/fotos/regataMasc4.jpg",
       "/media/fotos/regataMasc3.png"
     ],
-    video: "/media/videos/regataMascPrincipal.mov",
+    video: "/media/videos/regataMascPrincipal.mp4",
     inStock: true
   },
   {
@@ -386,7 +386,7 @@ export const PRODUCTS: Product[] = [
       "/media/fotos/viseira2.jpg",
       "/media/fotos/viseira3.jpg"
     ],
-    video: "/media/videos/Criadolago.mp4",
+    video: "/media/videos/cria.mp4",
     inStock: true
   },
   {
@@ -428,8 +428,7 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       "/media/fotos/capa1.jpg",
-      "/media/fotos/capa2.jpeg",
-      "/media/fotos/capa2.jpg"
+      "/media/fotos/capa2.jpeg"
     ],
     video: "/media/videos/capaRemo.mp4",
     inStock: true
